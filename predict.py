@@ -3,7 +3,9 @@ import argparse
 import joblib
 import pandas as pd
 
-MODEL_PATH = Path("models/weather_model.joblib")
+PROJECT_ROOT = Path(__file__).resolve().parent
+MODEL_PATH = PROJECT_ROOT / "weather_model.joblib"
+
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Predict rainfall in millimetres.")

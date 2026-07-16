@@ -2,12 +2,16 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 import pandas as pd
 
-DATA_PATH = Path("data/sample_weather.csv")
-OUTPUT_PATH = Path("screenshots/weather_trends.png")
+PROJECT_ROOT = Path(__file__).resolve().parent
+DATA_PATH = PROJECT_ROOT / "sample_weather.csv"
+OUTPUT_PATH = PROJECT_ROOT / "weather_trends.png"
+
 
 def main() -> None:
+    if not DATA_PATH.exists():
+        raise FileNotFoundError(f"Dataset not found: {DATA_PATH}")
+
     df = pd.read_csv(DATA_PATH, parse_dates=["date"])
-    OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
 
     plt.figure(figsize=(10, 5))
     plt.plot(df["date"], df["temperature_c"], label="Temperature (°C)")
