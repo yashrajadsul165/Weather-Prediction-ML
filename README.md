@@ -2,6 +2,8 @@
 
 A reproducible machine-learning project that predicts rainfall in millimetres from temperature, humidity, atmospheric pressure and wind speed. The project includes data exploration, model training, command-line prediction and visualisation.
 
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://yashraj-weather-prediction-ml.streamlit.app)
+
 ## What the project does
 
 - Loads and validates an included weather dataset
@@ -11,6 +13,10 @@ A reproducible machine-learning project that predicts rainfall in millimetres fr
 - Accepts new weather values from the command line
 - Provides an interactive Streamlit prediction dashboard
 - Produces a weather-trends chart
+
+## Live demo
+
+Try the deployed application: **[Weather Prediction ML App](https://yashraj-weather-prediction-ml.streamlit.app)**
 
 ## Model results
 
