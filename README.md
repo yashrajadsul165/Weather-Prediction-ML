@@ -9,6 +9,7 @@ A reproducible machine-learning project that predicts rainfall in millimetres fr
 - Evaluates the model using MAE and R²
 - Saves the trained model for later predictions
 - Accepts new weather values from the command line
+- Provides an interactive Streamlit prediction dashboard
 - Produces a weather-trends chart
 
 ## Model results
@@ -32,6 +33,7 @@ These results are a learning baseline on a small demonstration dataset, not a pr
 
 ```text
 Weather-Prediction-ML/
+├── app.py                      # Interactive Streamlit application
 ├── sample_weather.csv          # Demonstration dataset
 ├── train_model.py              # Training and evaluation pipeline
 ├── predict.py                  # Command-line rainfall prediction
@@ -40,6 +42,7 @@ Weather-Prediction-ML/
 ├── weather_model.joblib        # Trained model bundle
 ├── weather_trends.png          # Generated chart
 ├── prediction_result.png       # Example output
+├── MODEL_CARD.md                # Model scope, metrics and limitations
 └── requirements.txt            # Python dependencies
 ```
 
@@ -63,7 +66,18 @@ Then install the dependencies:
 pip install -r requirements.txt
 ```
 
-## Usage
+## Interactive application
+
+Train the model once, then launch the dashboard:
+
+```bash
+python train_model.py
+streamlit run app.py
+```
+
+The app provides validated weather inputs, an instant rainfall estimate and clear model-limitations guidance.
+
+## Command-line usage
 
 Train and evaluate the model:
 
@@ -106,7 +120,7 @@ jupyter notebook weather_prediction.ipynb
 - Compare multiple regression models
 - Use time-aware validation and feature engineering
 - Add live weather API data
-- Deploy an interactive Streamlit application
+- Deploy the Streamlit application to a public cloud service
 
 ## Author
 
@@ -117,3 +131,4 @@ jupyter notebook weather_prediction.ipynb
 ## License
 
 This project is available under the [MIT License](LICENSE).
+
