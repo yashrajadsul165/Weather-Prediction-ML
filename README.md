@@ -42,8 +42,9 @@ Weather-Prediction-ML/
 ├── weather_model.joblib        # Trained model bundle
 ├── weather_trends.png          # Generated chart
 ├── prediction_result.png       # Example output
-├── MODEL_CARD.md                # Model scope, metrics and limitations
-└── requirements.txt            # Python dependencies
+├── MODEL_CARD.md               # Model scope, metrics and limitations
+├── requirements.txt            # App and model dependencies
+└── requirements-dev.txt        # Notebook and visualisation tools
 ```
 
 ## Installation
@@ -60,10 +61,16 @@ Activate the environment on Windows:
 .venv\Scripts\activate
 ```
 
-Then install the dependencies:
+Install the app and model dependencies:
 
 ```bash
 pip install -r requirements.txt
+```
+
+For notebook and chart development, install the additional tools:
+
+```bash
+pip install -r requirements-dev.txt
 ```
 
 ## Interactive application
@@ -120,7 +127,7 @@ jupyter notebook weather_prediction.ipynb
 - Compare multiple regression models
 - Use time-aware validation and feature engineering
 - Add live weather API data
-- Deploy the Streamlit application to a public cloud service
+- Add live meteorological data and automated model monitoring
 
 ## Author
 
